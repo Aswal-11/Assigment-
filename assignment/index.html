@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Warehouse Space - Upper West Side</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .right-content{
+            font-size: 0.3rem;
+        }
+         /* Custom CSS for the text */
+        .assistant-text {
+            color: #0f2d4b; /* Dark blue color */
+            font-size: 0.65rem; /* Smaller font size */
+            line-height: 0.75rem; /* Adjusted line height for better readability */
+            
+        }
+
+        /* Italic text */
+        .italic-text {
+            font-style: italic; /* Make the text italic */
+        }
+
+        /* Responsive font size for small screens and above */
+        @media (min-width: 640px) {
+            .assistant-text {
+                font-size: 0.60rem; /* Slightly larger font size for small screens and above */
+                line-height: 1rem; /* Adjusted line height */
+            }
+        }
+
+    </style>
+</head>
+
+  <!-- Navbar -->
+<nav class="bg-white shadow-md px-4 md:px-8 py-3 flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex items-center">
+        <img src="icons/image.png" alt="WareSpace Logo" class="h-6 md:h-8">
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center space-x-6">
+        <!-- Phone Number -->
+        <div class="flex items-center space-x-2 text-black font-semibold">
+            <img src="nav/image.png" class="h-4" alt="Call">
+            <span class="text-sm">470-518-5965</span>
+        </div>
+
+        <!-- CTA Button -->
+        <a href="#" class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 text-sm font-semibold">
+            Book a Tour Today
+        </a>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="flex items-center space-x-4 md:hidden">
+        <!-- Phone Number -->
+        <div class="flex items-center space-x-2 text-black font-semibold">
+            <img src="nav/image.png" class="h-4" alt="Call">
+            <span class="text-sm">470-518-5965</span>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="text-black text-2xl font-bold focus:outline-none">
+            ☰
+        </button>
+    </div>
+</nav>
+
+
+<body class="bg-cover bg-center bg-no-repeat min-h-screen" style="background-image: url('image/5.jpg');">
+    <div class="max-sm:block sm:hidden">
+        <!-- Slider Container -->
+        <div class="relative max-w-4xl mx-auto overflow-hidden  shadow-lg z-0">
+            <!-- Main Image -->
+            <img id="main-image" src="image/1.jpg" alt="Main Image" class="w-full h-64 sm:h-96 md:h-[500px] object-cover ">
+
+            <!-- Navigation Arrows -->
+            <button id="prev" class="absolute top-1/2 left-4 w-8 bg-white text-[#00AA6C] p-1 rounded-full hover:bg-black/70 transition-colors">
+                &#10094;
+            </button>
+            <button id="next" class="absolute top-1/2 right-4 w-8 bg-white text-[#00AA6C] p-1 rounded-full hover:bg-black/70 transition-colors">
+                &#10095;
+            </button>
+        </div>
+
+        <!-- Thumbnail Container -->
+        <div class="flex justify-center gap-2 -mt-10 px-4 overflow-x-auto items-center ">
+            <img src="image/1.jpg" class="thumbnail w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg cursor-pointer border-2 z-10 border-transparent active" onclick="changeImage(0)">
+            <img src="image/2.jpg" class="thumbnail w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg cursor-pointer border-2 z-10 border-transparent" onclick="changeImage(1)">
+            <img src="image/5.jpg" class="thumbnail w-20 h-14 sm:w-24 sm:h-16 object-cover rounded-lg cursor-pointer border-2 z-10 border-transparent" onclick="changeImage(3)">
+        </div>   
+    </div>
+    <!-- Top Fold Section -->
+    <header class="flex items-center max-sm:w-full max-sm:px-0 justify-center text-center bg-cover bg-center text-white min-h-screen px-4 sm:px-10"
+        style="background-image: url('https://source.unsplash.com/1600x900/?warehouse,storage');">
+        
+        <div class="bg-[#e6f4eb] p-5 sm:p-10 rounded-lg w-full max-w-5xl mx-auto text-left text-black flex flex-col md:flex-row md:items-start md:gap-10 max-sm:rounded-none max-sm:-mt-4">
+            <!-- Left Content -->
+            <div class="md:w-3/5 w-full">
+                <!-- Rating -->
+                <div class="flex items-center gap-2 bg-[#f3f4f6] px-3 py-2 rounded-lg w-fit text-xs sm:text-sm ">
+                    <img src="image/google.webp" alt="Google" class="w-5 h-5">
+                    <span class="fa fa-star checked text-yellow-400"></span>
+                    <span class="fa fa-star checked text-yellow-400"></span>
+                    <span class="fa fa-star checked text-yellow-400"></span>
+                    <span class="fa fa-star checked text-yellow-400"></span>
+                    <span class="fa fa-star text-gray-400"></span>
+                    <span class="text-gray-600">(4.8/5.0)</span>
+                </div>
+
+                <h1 class="text-2xl sm:text-4xl font-semibold mt-4">
+                    Small warehouse space for rent in 
+                    <span class="text-[#00AA6C] font-bold">Upper West Side, Atlanta, GA</span>
+                </h1>
+
+                <!-- Features List -->
+                <div class="mt-4 space-y-3">
+                    <div class="flex items-start gap-2.5">
+                        <div class="flex items-center just">
+                            <img src="icons/icon1.png" alt="Flexible spaces & leases" class="w-8 h-8">
+                        </div>
+                        <div>
+                            <p class="font-bold text-[#102442] text-sm sm:text-base">Flexible spaces & leases</p>
+                            <p class="text-xs sm:text-sm text-gray-600">Leases as short as 6 months. Upscale or downscale anytime!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-2.5">
+                        <img src="icons/icon2.png" alt="All-inclusive warehousing" class="w-8 h-8">
+                        <div>
+                            <p class="font-bold text-[#102442] text-sm sm:text-base">All-inclusive warehousing</p>
+                            <p class="text-xs sm:text-sm text-gray-600">Rental includes racking, equipment, loading docks & more</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-2.5">
+                        <img src="icons/icon3.png" alt="Immediate availability" class="w-8 h-8">
+                        <div>
+                            <p class="font-bold text-[#102442] text-sm sm:text-base">Immediate availability</p>
+                            <p class="text-xs sm:text-sm text-gray-600">Move in today!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Grid -->
+                <div class="flex gap-2.5 mt-4 overflow-auto max-sm:hidden">
+                    <img src="image/1.jpg" alt="Warehouse 1" class="w-20 sm:w-24 h-16 sm:h-20 rounded-lg object-cover">
+                    <img src="image/2.jpg" alt="Warehouse 2" class="w-20 sm:w-24 h-16 sm:h-20 rounded-lg object-cover">
+                    <img src="image/3.jpg" alt="Warehouse 3" class="w-20 sm:w-24 h-16 sm:h-20 rounded-lg object-cover">
+                    <img src="image/4.jpg" alt="Warehouse 4" class="w-20 sm:w-24 h-16 sm:h-20 rounded-lg object-cover">
+                </div>
+
+                <p class="mt-4 sm:mt-8 font-bold text-[#00AA6C] text-sm sm:text-base">200-2,000 sq ft starting as low as $650/month</p>
+            </div>
+
+        <!-- Right Form -->
+            <div class="bg-white p-4 sm:p-5 rounded-lg shadow-lg mt-5 md:mt-0 md:w-2/5 w-full">
+                <!-- Form Heading -->
+                <h3 class=" sm:text-[1.4rem] font-semibold mb-2 max-sm:text-md max-sm:text-center sm:text-start">Visit for an in-person tour</h3>
+
+                <!-- Assistant Section -->
+                <div class="flex items-center gap-7 max-sm:gap-3 max-sm:flex-col">
+                    <!-- Images -->
+                    <div class="relative w-20 h-8">
+                        <img src="image/p1.png" alt="Cashana" class="w-8 h-8 rounded-full shadow-md">
+                        <img src="image/p2.png" alt="Khadijah" class="w-8 h-8 rounded-full shadow-md absolute left-5 top-0">
+                    </div>
+                    <!-- Text -->
+                    <p class="assistant-text max-sm:text-center max-sm:px-10">
+                        Cashana or Khadijah will answer your questions and find you a space that meets your needs.
+                        <span class="italic-text">No commitment necessary!</span>
+                    </p>
+                </div>
+
+                <!-- Form -->
+                <form id="workspace-form" class="mt-4 space-y-2.5">
+                    <input type="text" placeholder="First Name" required class="w-full p-3 border-2 border-gray-300 rounded-md text-xs sm:text-sm">
+                    <input type="text" placeholder="Last Name" required class="w-full p-3 border-2 border-gray-300 rounded-md text-xs sm:text-sm">
+                    <input type="email" placeholder="Email" required class="w-full p-3 border-2 border-gray-300 rounded-md text-xs sm:text-sm">
+                    <input type="tel" placeholder="Phone number (Just so we can remind you of your appt)" required class="w-full p-3 border-2 border-gray-300 rounded-md text-xs sm:text-sm">
+                    <button type="submit" class="w-full bg-[#00AA6C] text-white p-3  rounded-md text-xs sm:text-sm hover:bg-[#008a56] transition-colors">
+                        Step 2: Find a time that works <span class="pl-1">&#10095;</span>
+                    </button>
+                </form>
+
+                <!-- Call to Action -->
+                <p class="text-xs sm:text-sm mt-2.5">
+                    Questions? Call us: <a href="#" class="text-[#00AA6C] hover:underline">415-985-0940</a>
+                </p>
+
+                <!-- Job Link -->
+                <a href="#" class="inline-block mt-7 text-xs sm:text-sm text-[#0f2d4b] bg-[#e6f4eb] px-3 py-1 rounded-full hover:bg-[#d4e8d9] transition-colors">
+                    Looking for a job? <span class="underline">Click here.</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        const images = ["image/1.jpg", "image/2.jpg", "image/3.jpg", "image/5.jpg"];
+        let currentIndex = 0;
+
+        // Event listeners for arrows
+        document.getElementById("prev").addEventListener("click", () => changeImage(currentIndex - 1));
+        document.getElementById("next").addEventListener("click", () => changeImage(currentIndex + 1));
+
+        // Function to change the main image
+        function changeImage(index) {
+            if (index < 0) index = images.length - 1;
+            if (index >= images.length) index = 0;
+            currentIndex = index;
+            document.getElementById("main-image").src = images[currentIndex];
+            document.querySelectorAll(".thumbnail").forEach((thumb, i) => {
+                thumb.classList.toggle("active", i === currentIndex);
+            });
+        }
+    </script>
+
+</body>
+</html>
